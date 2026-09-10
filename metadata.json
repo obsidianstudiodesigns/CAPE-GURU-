@@ -1,0 +1,6 @@
+{
+  "name": "CAPE GURU",
+  "description": "Premier technical solutions for Aircon services, DStv & Openview installations, Mobile Appliance repairs, Fibre & WiFi networking, and Audio Visual services across Cape Town and Western Cape.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
