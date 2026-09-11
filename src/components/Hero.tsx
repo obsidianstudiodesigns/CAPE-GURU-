@@ -36,18 +36,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           referrerPolicy="no-referrer"
         />
 
-        {/* Subtle, soft light gradient on left to maintain high contrast behind text without washing out the photo */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent lg:from-black/35 lg:via-transparent lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/20" />
+        {/* Soft, natural light wash on left so dark text is razor-sharp while wallpaper remains fully visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-transparent lg:from-white/65 lg:via-white/25 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/20" />
       </div>
 
       {/* Foreground Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Sleek, readable frosted panel on the left leaves the rest of the background completely clear */}
-        <div className="max-w-2xl bg-white/92 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/60 shadow-2xl">
+        {/* Transparent container leaves background wallpaper fully visible */}
+        <div className="max-w-2xl bg-transparent border-0 shadow-none p-0">
           
           {/* Location Tag */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/90 backdrop-blur-xs text-blue-700 border border-blue-200/90 text-xs font-semibold mb-4">
             <span>Western Cape · Cape Town & Surrounds</span>
           </div>
 
@@ -64,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
           {/* Clean Trust Pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 w-full">
-            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50/90 border border-slate-200/80 shadow-xs">
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/80 shadow-xs">
               <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
               <div className="text-xs">
                 <div className="font-bold text-slate-900">1 Year Guarantee</div>
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50/90 border border-slate-200/80 shadow-xs">
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/80 shadow-xs">
               <Clock className="w-5 h-5 text-blue-600 shrink-0" />
               <div className="text-xs">
                 <div className="font-bold text-slate-900">Same-Day Dispatch</div>
@@ -80,7 +80,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50/90 border border-slate-200/80 shadow-xs">
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/80 shadow-xs">
               <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
               <div className="text-xs">
                 <div className="font-bold text-slate-900">Certified Team</div>
