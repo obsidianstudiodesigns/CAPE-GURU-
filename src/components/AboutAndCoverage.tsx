@@ -8,7 +8,7 @@ interface AboutAndCoverageProps {
 
 export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBooking }) => {
   return (
-    <section id="why-us" className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
+    <section id="why-us" className="py-12 sm:py-16 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-3xl mb-8">
@@ -26,7 +26,7 @@ export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBookin
 
         {/* 3 Value Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col justify-between p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-sm">
             <div>
               <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
                 <ShieldCheck className="w-6 h-6" />
@@ -38,7 +38,7 @@ export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBookin
             </div>
           </div>
 
-          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col justify-between p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-sm">
             <div>
               <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
                 <Users className="w-6 h-6" />
@@ -50,7 +50,7 @@ export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBookin
             </div>
           </div>
 
-          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col justify-between p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-sm">
             <div>
               <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
                 <Clock className="w-6 h-6" />
@@ -64,7 +64,7 @@ export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBookin
         </div>
 
         {/* Action strip */}
-        <div className="mt-8 p-4 sm:p-5 bg-white border border-slate-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 p-4 sm:p-5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div>
             <div className="text-sm font-bold text-slate-900">Need a quote or quick diagnostic visit?</div>
             <div className="text-xs text-slate-500">Contact our technical dispatch directly for prompt assistance.</div>

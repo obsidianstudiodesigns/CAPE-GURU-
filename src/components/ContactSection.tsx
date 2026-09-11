@@ -42,7 +42,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
   )}`;
 
   return (
-    <section id="contact" className="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <section id="contact" className="py-12 sm:py-16 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -64,7 +64,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
 
             <div className="space-y-3">
               {/* Phone */}
-              <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+              <div className="flex items-start gap-3 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-xs">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
@@ -83,7 +83,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
               </div>
 
               {/* Email */}
-              <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+              <div className="flex items-start gap-3 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-xs">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -99,7 +99,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
               </div>
 
               {/* Location */}
-              <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+              <div className="flex items-start gap-3 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-xs">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -112,7 +112,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
               </div>
 
               {/* Hours */}
-              <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+              <div className="flex items-start gap-3 p-3 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-xs">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
@@ -138,7 +138,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
 
           {/* Right: Clean, Basic Booking Form */}
           <div className="lg:col-span-7">
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+            <div className="bg-white/95 backdrop-blur-sm border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-1">
                 Request a Callback or Quotation
               </h3>

@@ -47,7 +47,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
     )}`;
 
   return (
-    <section id="services" className="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <section id="services" className="py-12 sm:py-16 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -129,7 +129,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
 
         {/* Tab 1: Aircon Services */}
         {activeTab === 'aircon' && (
-          <div id="aircon" className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div id="aircon" className="bg-white/95 backdrop-blur-sm border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               <div className="lg:col-span-7 space-y-4">
@@ -227,7 +227,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
 
         {/* Tab 2: DStv & TV Mounting */}
         {activeTab === 'dstv' && (
-          <div id="dstv" className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div id="dstv" className="bg-white/95 backdrop-blur-sm border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               <div className="lg:col-span-7 space-y-4">
@@ -324,7 +324,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
 
         {/* Tab 3: Appliance Repairs */}
         {activeTab === 'appliances' && (
-          <div id="appliances" className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div id="appliances" className="bg-white/95 backdrop-blur-sm border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               <div className="lg:col-span-7 space-y-4">
@@ -426,7 +426,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
 
         {/* Tab 4: Fibre, WiFi & Morclick */}
         {activeTab === 'network' && (
-          <div id="networking" className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div id="networking" className="bg-white/95 backdrop-blur-sm border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
             <div className="space-y-6">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
@@ -492,7 +492,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             
             {/* 1. Residential */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Residential Services</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Complete technical support for homes and apartments including power backup links, smart home sensors, and TV setups.
@@ -506,7 +506,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 2. Morclick */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Morclick Satellite</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Reliable satellite internet installation for rural properties, farms, and locations without fibre coverage.
@@ -520,7 +520,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 3. Communal & Commercial */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Communal & Commercial</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 SMATV centralized satellite distribution for apartment blocks, hotels, commercial HVAC, and office AV networks.
@@ -534,7 +534,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 4. Fibre Services */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Fibre Services</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Internal fibre cabling, ONT box relocation, optical patch cord fixes, and splice repairs.
@@ -548,7 +548,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 5. Audio Visual */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Audio Visual Services</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Architectural TV wall mounting, concealed in-wall conduit runs, soundbars, and multi-room audio distribution.
@@ -562,7 +562,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 6. WiFi and Networking */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">WiFi and Networking</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Whole-home mesh WiFi, Cat6 ethernet cabling, commercial access points, and signal troubleshooting.
@@ -576,7 +576,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 7. DSTV Installations */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">DSTV Installations</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 New satellite dish installations, Explora Ultra setups, Extra View, and emergency signal recovery (E48-32).
@@ -590,7 +590,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking 
             </div>
 
             {/* 8. Aircon Service */}
-            <div className="p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl transition-colors">
+            <div className="p-4 bg-white/95 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-xl transition-all shadow-xs hover:shadow-sm">
               <div className="font-bold text-slate-900 text-base">Aircon Service</div>
               <p className="text-xs text-slate-600 mt-1.5">
                 Split-unit installations, PCB repairs, chemical deep cleaning, antibacterial wash, and gas regassing.
