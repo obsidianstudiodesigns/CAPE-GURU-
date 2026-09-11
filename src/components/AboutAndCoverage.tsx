@@ -1,6 +1,6 @@
 import React from 'react';
-import { COMPANY_INFO, SERVICE_AREAS } from '../data/servicesData';
-import { ShieldCheck, Users, Clock, MapPin, CheckCircle, Phone } from 'lucide-react';
+import { COMPANY_INFO } from '../data/servicesData';
+import { ShieldCheck, Users, Clock, Phone, Calendar } from 'lucide-react';
 
 interface AboutAndCoverageProps {
   onOpenBooking: () => void;
@@ -11,92 +11,80 @@ export const AboutAndCoverage: React.FC<AboutAndCoverageProps> = ({ onOpenBookin
     <section id="why-us" className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
-          {/* Left: About Us & Trust */}
-          <div className="lg:col-span-6 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
-              About Cape Guru
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Experienced, Customer-Orientated Technical Teams
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Guru Satellite Systems and Cape Guru have built a reputation for high standards of workmanship, 
-              neat cable management, and honest customer service throughout Cape Town.
-            </p>
+        <div className="max-w-3xl mb-8">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
+            About Cape Guru
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+            Experienced, Customer-Orientated Technical Teams
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+            Guru Satellite Systems and Cape Guru have built a reputation for high standards of workmanship, 
+            neat cable management, and honest customer service throughout Cape Town and surrounds.
+          </p>
+        </div>
 
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
-                <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold text-slate-900">1 Year Guarantee on Major Repairs</div>
-                  <div className="text-xs text-slate-500 mt-0.5">
-                    Every major appliance replacement part and technical installation is protected for a full 12 months.
-                  </div>
-                </div>
+        {/* 3 Value Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                <ShieldCheck className="w-6 h-6" />
               </div>
-
-              <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
-                <Users className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold text-slate-900">Customer-Focused Technicians</div>
-                  <div className="text-xs text-slate-500 mt-0.5">
-                    Friendly, courteous, and respectful of your home. We clean up all work areas upon completion.
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
-                <Clock className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold text-slate-900">Fast On-Site Response</div>
-                  <div className="text-xs text-slate-500 mt-0.5">
-                    Our mobile vans are stocked with components to fix issues on the spot without unnecessary delays.
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-base font-bold text-slate-900">1 Year Guarantee on Major Repairs</h3>
+              <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                Every major appliance replacement part and technical installation is backed with our 12-month peace-of-mind guarantee.
+              </p>
             </div>
           </div>
 
-          {/* Right: Areas Covered */}
-          <div id="areas" className="lg:col-span-6 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
-              Service Areas
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Where We Work in the Western Cape
-            </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Our mobile service vans operate throughout greater Cape Town and surrounding regions:
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-              {SERVICE_AREAS.map((area, idx) => (
-                <div 
-                  key={idx}
-                  className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-200 text-xs text-slate-700"
-                >
-                  <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                  <span className="font-medium">{area}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-between gap-4 mt-4">
-              <div>
-                <div className="text-xs font-bold text-blue-900">Need to check van availability?</div>
-                <div className="text-xs text-blue-700">Call us directly to check when we can visit your area.</div>
+          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                <Users className="w-6 h-6" />
               </div>
-              <a
-                href={`tel:${COMPANY_INFO.phoneRaw}`}
-                className="px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg whitespace-nowrap transition-colors"
-              >
-                082 203 8548
-              </a>
+              <h3 className="text-base font-bold text-slate-900">Customer-Focused Technicians</h3>
+              <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                Friendly, courteous, and respectful of your property. We test all installations thoroughly and clean up before leaving.
+              </p>
             </div>
           </div>
 
+          <div className="flex flex-col justify-between p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                <Clock className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold text-slate-900">Fast On-Site Response</h3>
+              <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                Our mobile workshop vans are stocked with replacement components to diagnose and resolve faults on the spot.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Action strip */}
+        <div className="mt-8 p-4 sm:p-5 bg-white border border-slate-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div className="text-sm font-bold text-slate-900">Need a quote or quick diagnostic visit?</div>
+            <div className="text-xs text-slate-500">Contact our technical dispatch directly for prompt assistance.</div>
+          </div>
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            <button
+              onClick={onOpenBooking}
+              className="flex-1 sm:flex-none px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <Calendar className="w-4 h-4" />
+              <span>Book a Visit</span>
+            </button>
+            <a
+              href={`tel:${COMPANY_INFO.phoneRaw}`}
+              className="flex-1 sm:flex-none px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <Phone className="w-4 h-4 text-blue-600" />
+              <span>082 203 8548</span>
+            </a>
+          </div>
         </div>
 
       </div>
