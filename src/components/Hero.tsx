@@ -25,20 +25,38 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden border-b border-slate-200"
     >
       {/* 
-        Full background wallpaper with high visibility:
-        Uses 'Landing page.jpg' directly with light, subtle vignette for optimal photo exposure
+        Full background wallpaper with responsive framing:
+        - Mobile: Zoomed out so the full width and broad composition of Landing page.jpg fits the mobile viewport with atmospheric ambient blending
+        - Desktop: Expansive object-cover object-center with natural left-side text contrast gradient
       */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={landingPageWallpaper}
-          alt="Cape Guru Technical Services Cape Town"
-          className="w-full h-full object-cover object-center"
-          referrerPolicy="no-referrer"
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Soft atmospheric blurred backdrop on mobile so matching tones smoothly extend the full height */}
+        <div
+          className="absolute inset-0 bg-cover bg-center blur-2xl opacity-35 sm:hidden scale-110"
+          style={{ backgroundImage: `url(${landingPageWallpaper})` }}
+          aria-hidden="true"
         />
 
-        {/* Soft, natural light wash on left so dark text is razor-sharp while wallpaper remains fully visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-transparent lg:from-white/65 lg:via-white/25 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/20" />
+        {/* Sharp wallpaper layer:
+            - Mobile: Zoomed out so the entire landscape photo fits cleanly across the screen without 4x zoom cropping
+            - Desktop: Full object-cover object-center
+        */}
+        <div className="absolute inset-0 flex items-start justify-center sm:block">
+          <img
+            src={landingPageWallpaper}
+            alt="Cape Guru Technical Services Cape Town"
+            className="w-full sm:h-full object-contain sm:object-cover object-top sm:object-center pt-20 sm:pt-0 max-h-[52vh] sm:max-h-none transition-all duration-300"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
+        {/* Seamless contrast and lighting overlays */}
+        {/* Mobile: Gentle top-to-bottom wash for dark text readability while keeping the zoomed-out photo clear */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/65 to-slate-50/95 sm:hidden" />
+
+        {/* Desktop: Gentle left-to-right wash keeping right side photo crisp and left text legible */}
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-transparent lg:from-white/65 lg:via-white/25 lg:to-transparent" />
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/20" />
       </div>
 
       {/* Foreground Content */}
